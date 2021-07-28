@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    
+        <img src="slatervroom_drbbbl.gif" alt="" id="pozslika">
+        <h2>Car Wash</h2>
+        <img src="logo1mpy.png" alt="" id="logo" >
+        <p>Choose a language./ Wähle eine Sprache./ Scegli una lingua./ Choisir une langue.</p>
+        
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content" onclick=promijeniboju();>
+            <a href="#hrvatski" onclick=before();>Hrvatski</a>
+            <a href="#engelski" onclick=afterr();>English</a>
+            <a href="#njemacki">Deutsche</a>
+            <a href="#talijanksi">Italiano</a>
+            <a href="#francuski">Français</a>
+          </div>
+        </div>
+        <section id="pozslika1">
+            <div class="sekcija">
+            <img id="myImage" src="">
+            <h1 id="message"></h1>
+
+            <h1 id="program0"></h1>
+            <p id="program01"></p>
+
+            <h1 id="program1"></h1>
+            <p id="program11"></p>
+
+            <h1 id="program2"></h1>
+            <p id="program21"></p>
+
+            <h1 id="program3"></h1>
+            <p id="program31"></p>
+            </div>
+        </section>
+        
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        // fuction for changing picture
+        function before(){
+             document.getElementById('myImage')
+             .src="Screenshot_1.png";
+             document.getElementById('message')
+             .innerHTML="Hrvatski";
+         }
+           
+         function afterr(){
+             document.getElementById('myImage')
+             .src="pra2.png";
+             document.getElementById('message')
+             .innerHTML="English";
+
+             document.getElementById('program0')
+             .innerHTML="RIM WASHING  -  WHITE BUTTON";
+             document.getElementById('program01')
+             .innerHTML="Chemistry for washing your rims, tires or flies. The chemistry will come out slowly through your syringe. Duration; 5kn = 80 sec of washing";
+
+             document.getElementById('program1')
+             .innerHTML="WASHING  -  RED BUTTON";
+             document.getElementById('program11')
+             .innerHTML="65 'C hot water mixed with powder and shampoo. Keep the sprayer 10 to 15 cm away from the car so that you can remove stubborn stains and dirt. In the beginning, it would be good to quickly wet the car with that programme, and after that start with a more detailed washing of the filth. Wash your car from the roof towards the rear end of the vehicle. Duration: 5kn = 105 sec of washing";
+
+            document.getElementById('program2')
+             .innerHTML="RAIN - X  -  YELLOW BUTTON";
+             document.getElementById('program21')
+             .innerHTML= "Rain-X helps to repel water and other particulates from your vehicle while at the same time increasing visibility. Water will slide from your car. This is a quick procces, it doesnt need to be perfect and keep your sprayer 30 to 40cm from the car. Duration: 5kn = 75sec of washing ";
+             
+             document.getElementById('program3')
+             .innerHTML="RINSE  -  BLUE BUTTON";
+             document.getElementById('program31')
+             .innerHTML= "This water is 99% purified by osmosis. It does not leave traces or stains after drying. Stains will remain only after a poorly washed vehicle. Keep the sprayer 30 to 40 cm away from the car. Duration: 5kn = 105 sec of washing";
+         }
+        
+         function promijeniboju() {
+            document.getElementById("pozslika1").style.backgroundColor='#109ada';
+           
+         }
+
+        </script>
+        
+
+
+
+</body>
+</html>
